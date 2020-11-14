@@ -4,17 +4,17 @@
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
   </head>
-  <body class="page__body">
+  <body class="page-body">
     <header class="page-header">
       <a class="page-header__logo">
         <img src="https://via.placeholder.com/150x150" alt="Приложение Pink" width="150" height="150">
       </a>
       <nav class="main-navigation">
         <div class="main-navigation__wrapper">
-          <button class="main-navigation__toggle" aria-label="Открыть меню">Открыть меню</button>
+          <button class="main-navigation__toggle" aria-label="Открыть меню"></button>
           <ul class="main-navigation__list">
             <li class="main-navigation__item">
-              <a href="#">Главная</a>
+              <a>Главная</a>
             </li>
             <li class="main-navigation__item">
               <a href="photos.html">Фотографии</a>
@@ -56,15 +56,15 @@
               <p class="advantages__slogan">Нам есть, что вам предложить!</p>
             </header>
             <ul class="advantages__list">
-              <li class="advantages__item advanteges__item--none">
+              <li class="advantages__item advantages__item--before">
                 <h3 class="advantages__title">Поднимает настроение</h3>
                 <p class="advantages__discription">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
               </li>
-              <li class="advantages__item advantages__item--middle">
+              <li class="advantages__item advantages__item--in-progress">
                 <h3 class="advantages__title">Меняет мир вокруг</h3>
                 <p class="advantages__discription">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
               </li>
-              <li class="advantages__item advantages__item--on">
+              <li class="advantages__item advantages__item--after">
                 <h3 class="advantages__title">Заводит новых друзей</h3>
                 <p class="advantages__discription">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
               </li>
@@ -73,39 +73,42 @@
         </section>
         <section class="reviews">
           <h2 class="visually-hidden">Отзывы</h2>
-          <div class="reviews__wrapper"></div>
+          <div class="reviews__wrapper slider">
             <ul class="reviews__list slider__list">
               <li class="reviews__item slider__item">
-                <h3 class="reviews__title">Николай Петров</h2>
+                <h3 class="reviews__title">Николай Петров</h3>
                 <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
               </li>
               <li class="reviews__item slider__item">
-                <h3 class="reviews__title">Николай Петров</h2>
+                <h3 class="reviews__title">Николай Петров</h3>
                 <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
               </li>
               <li class="reviews__item slider__item">
-                <h3 class="reviews__title">Николай Петров</h2>
+                <h3 class="reviews__title">Николай Петров</h3>
                 <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
               </li>
             </ul>
-            <button class="reviews__prev">Предыдущий отзыв</button>
-            <button class="reviews__next">Следующий отзыв</button>
+            <div class="reviews__button-wrapper">
+              <button class="reviews__prev" aria-label="Предыдущий отзыв"></button>
+              <button class="reviews__next" aria-label="Следующий отзыв"></button>
+            </div>
             <div class="reviews__toggles slider__toggles">
               <button class="slider__toggle slider__toggle--current">1</button>
               <button class="slider__toggle">2</button>
               <button class="slider__toggle">3</button>
             </div>
+          </div>
         </section>
         <section class="price">
           <h2 class="visually-hidden">Прайс-лист</h2>
-          <div class="price__wrapper">
+          <div class="price__wrapper slider">
             <table class="price-table">
               <thead class="price-table__header">
                 <tr class="price-table__row">
                   <th></th>
-                  <th>База<span>1,99 USD</span></th>
-                  <th>СТАНДАРТ<span>3,99 USD</span></th>
-                  <th>АНЛИМ<span>9,99 USD</span></th>
+                  <th>База<span>1,99 usd</span></th>
+                  <th>Стандарт<span>3,99 usd</span></th>
+                  <th>Анлим<span>9,99 usd</span></th>
                 </tr>
               </thead>
               <tr class="price-table__row">
@@ -141,7 +144,7 @@
             <dl class="contacts__list">
               <div class="contacts__item">
                 <dt class="contacts__term">Звоните:</dt>
-                <dd class="contacts__discription"><a href="tel:+7 (812) 555-66-66">+7 (812) 555-66-66</a></dd>
+                <dd class="contacts__discription"><a href="tel:+78125556666">+7 (812) 555-66-66</a></dd>
               </div>
               <div class="contacts__item">
                 <dt class="contacts__term">Пишите:</dt>
@@ -152,7 +155,7 @@
                 <dd class="contacts__discription">ул. Большая Конюшенная, 19/8</dd>
               </div>
             </dl>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002935!2d30.320858715847518!3d59.93871916905446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1605265008587!5m2!1sru!2sru" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002935!2d30.320858715847518!3d59.93871916905446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1605265008587!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
           </div>
         </section>
         <footer class="page-footer">
@@ -162,13 +165,13 @@
           <div class="social">
             <ul class="social__list">
               <li class="social__item">
-                <a href="" class="social__link social__link--twitter" aria-label="Мы в Твиттере">twitter</a>
+                <a href="#!" class="social__link social__link--twitter" aria-label="Мы в Твиттере">twitter</a>
               </li>
               <li class="social__item">
-                <a href="" class="social__link social__link--facebook" aria-label="Мы в Фейсбуке">facebook</a>
+                <a href="#!" class="social__link social__link--facebook" aria-label="Мы в Фейсбуке">facebook</a>
               </li>
               <li class="social__item">
-                <a href="" class="social__link social__link--youtube" aria-label="Мы в Ютубе">youtube</a>
+                <a href="#!" class="social__link social__link--youtube" aria-label="Мы в Ютубе">youtube</a>
               </li>
             </ul>
           </div>
