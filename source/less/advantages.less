@@ -1,0 +1,40 @@
+.advantages {
+  &__header {
+    background-color: @basic-white;
+    background: linear-gradient(176deg, @basic-white, @basic-white 80%, @basic-gray 80%, @basic-gray 100%);
+    padding-top: 46px;
+    padding-bottom: 70px;
+  }
+  &__slogan {
+    margin: 0;
+    padding: 0;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 120%;
+    color: @basic-grayfont;
+    text-align: center;
+  }
+  &__slogan:not(:last-child) {
+    padding-bottom: 32px;
+  }
+  &__list {
+    .reset-ul();
+  }
+  &__title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    color: @basic-black;
+    text-align: center;
+  }
+  &__discription {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: @basic-grayfont;
+    text-align: center;
+  }
+}
