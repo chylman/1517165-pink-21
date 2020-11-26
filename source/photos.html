@@ -135,11 +135,11 @@
           Затмите их всех! Выкладывайте все, что накопилось в телефоне!
         </p>
         <form class="photo-post__form" action="https://echo.htmlacademy.ru" method="post">
-          <img src="https://via.placeholder.com/200x200" alt="Пользовательская фотография для обработки">
+          <img class="photo-post__image" src="https://via.placeholder.com/100x100" alt="Пользовательская фотография для обработки">
           <button class="photo-post__button-select photo-post__button-select--crop photo-post__button-select--current" type="button" aria-label="Обрезать"></button>
           <button class="photo-post__button-select photo-post__button-select--fill" type="button" aria-label="Заливка"></button>
           <button class="photo-post__button-select photo-post__button-select--contrast" type="button" aria-label="Контраст"></button>
-          <input class="photo-post__range" type="range" name="range-crop" min="1" max="100">
+          <input class="photo-post__range photo-post__range--current" type="range" name="range-crop" min="1" max="100">
           <input class="photo-post__range" type="range" name="range-fill" min="1" max="100">
           <input class="photo-post__range" type="range" name="range-contrast" min="1" max="100">
           <button class="photo-post__button photo-post__button--submit" type="submit">Запостить</button>
