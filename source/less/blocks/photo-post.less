@@ -1,0 +1,70 @@
+.photo-post__preview {
+  .reset-p();
+  padding-top: 49px;
+  padding-bottom: 52px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+  color: @basic-grayfont;
+  background-color: @basic-white;
+}
+
+.photo-post__form {
+  padding-top: 20px;
+}
+
+.photo-post__image {
+  width: 100%;
+  margin-bottom: 42px;
+}
+
+.photo-post__button-select {
+  .reset-button();
+  width: 44px;
+  height: 44px;
+  margin-bottom: 39px;
+  background-color: @basic-darkgray;
+}
+
+.photo-post__range {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 73px;
+
+  &:not(.photo-post__range--current) {
+    display: none;
+  }
+}
+
+.photo-post__button {
+  .reset-button();
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 12px;
+  padding: 21px 0;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+
+  &--submit {
+    color: @basic-pink;
+    border: 3px solid @basic-pink;
+    border-radius: 30px;
+  }
+
+  &--reset {
+    color: @basic-darkgray;
+    opacity: 0.1;
+    border: 3px solid @basic-darkgray;
+    box-sizing: border-box;
+    border-radius: 30px;
+  }
+
+  &:last-child {
+    margin-bottom: 41px;
+  }
+}
