@@ -14,6 +14,19 @@
   color: @basic-grayfont;
 }
 
+.contacts__list {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: @tablet-width) {
+  .contacts__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
 .contacts__term {
   font-style: normal;
   font-weight: bold;
