@@ -55,7 +55,7 @@
   box-sizing: border-box;
   margin-top: 28px;
   margin-bottom: 38px;
-  padding: 21px 39px;
+  padding: 21px 0;
   color: @basic-white;
   border: 3px solid @basic-white;
   border-radius: 29px;
@@ -63,11 +63,13 @@
   font-size: 18px;
   line-height: 18px;
   text-decoration: none;
+  text-align: center;
 }
 
 .download__links-list {
   .reset-ul();
   display: flex;
+  flex-wrap: wrap;
 }
 
 .download__links-item a {
