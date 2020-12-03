@@ -1,5 +1,29 @@
 .page-header {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
   background-color: @basic-darkgray;
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    flex-direction: row;
+  }
+}
+
+.page-header__logo {
+  display: flex;
+  min-height: 69px;
+  padding: 0 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__logo {
+    min-height: 110px;
+  }
+}
+
+.page-header__logo img {
+  margin: auto 0;
 }

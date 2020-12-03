@@ -1,13 +1,43 @@
-.download__wrapper {
-  padding-top: 28px;
+.download {
   background-color: @basic-darkgray;
+}
+
+@media (min-width: @tablet-width) {
+  .download {
+    background-image: url("../img/phone.png"), url("../img/screen.png"), url("../img/back-mobile.png");
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: bottom center, center, top;
+    background-size: auto, auto, 100%;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .download__wrapper {
+    width: 50%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .download__wrapper {
+    width: 33%;
+  }
 }
 
 .download__header {
   min-height: 396px;
-  background-image: url("../img/phone.png"), url("../img/screen.png"), url("../img/back-mobile.png");
-  background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: center;
+  padding-top: 28px;
+  background-image: url("../img/phone.png"), url("../img/back-mobile.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom left, top;
+  background-size: auto, 100%;
+}
+
+@media (min-width: @tablet-width) {
+  .download__header {
+    min-height: auto;
+    padding-top: 102px;
+    background: none;
+  }
 }
 
 .download__slogan {
@@ -25,7 +55,7 @@
   box-sizing: border-box;
   margin-top: 28px;
   margin-bottom: 38px;
-  padding: 21px 39px;
+  padding: 21px 0;
   color: @basic-white;
   border: 3px solid @basic-white;
   border-radius: 29px;
@@ -33,11 +63,13 @@
   font-size: 18px;
   line-height: 18px;
   text-decoration: none;
+  text-align: center;
 }
 
 .download__links-list {
   .reset-ul();
   display: flex;
+  flex-wrap: wrap;
 }
 
 .download__links-item a {

@@ -1,3 +1,48 @@
+@media (min-width: @tablet-width) {
+  .contest__form-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contest__fieldgroup--change-application {
+    order: 2;
+  }
+
+  .contest__fieldgroup--contacts {
+    order: 3;
+  }
+
+  .contest__fieldgroup--advantages {
+    order: 4;
+  }
+
+  .contest__fieldgroup--emotion {
+    order: 5;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contest__form-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contest__fieldgroup--contacts {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .contest__fieldgroup--advantages {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .contest__fieldgroup--emotion {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+
 .contest__legend {
   .reset-p();
   padding-top: 54px;

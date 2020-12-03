@@ -17,17 +17,34 @@
 
 .photos__list {
   .reset-ul();
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: @tablet-width) {
+  .photos__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .photos__item:first-child {
+    width: 100%;
+  }
+
+  .photos__item {
+    width: 50%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .photos__item {
+    width: 33%;
+  }
 }
 
 .photos__item {
   .reset-article();
-  padding-left: 17px;
-  padding-right: 10px;
   background-color: @basic-gray;
-}
-
-.photos__image {
-  width: 100%;
 }
 
 .photos__name {

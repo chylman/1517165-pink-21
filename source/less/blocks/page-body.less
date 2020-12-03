@@ -1,8 +1,22 @@
 .page-body {
-  margin: 0;
+  min-width: 320px;
+  max-width: 1180px;
+  margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
   font-family: "OpenSans", "Arial", sans-serif;
   background-color: @basic-gray;
   color: @basic-grayfont;
+}
+
+@media (min-width: @tablet-width) {
+  .page-body {
+    min-width: 660px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-body {
+    min-width: 960px;
+  }
 }
