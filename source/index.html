@@ -8,46 +8,50 @@
   </head>
   <body class="page-body">
     <header class="page-header">
-      <a class="page-header__logo">
-        <img src="https://via.placeholder.com/74x23" alt="Приложение Pink" width="74" height="23">
-      </a>
-      <nav class="main-navigation">
-        <div class="main-navigation__wrapper">
-          <button class="main-navigation__toggle" type="button" aria-label="Открыть меню"></button>
-          <ul class="main-navigation__list">
-            <li class="main-navigation__item">
-              <a>Главная</a>
-            </li>
-            <li class="main-navigation__item">
-              <a href="photos.html">Фотографии</a>
-            </li>
-            <li class="main-navigation__item">
-              <a href="contest.html">Конкурс</a>
-            </li>
-            <li class="main-navigation__item">
-              <a href="https://htmlacademy.ru/intensive/adaptive">Html academy</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      <div class="page-header__wrapper">
+        <a class="page-header__logo">
+          <img src="./img/pink-logo-mobile.svg" alt="Приложение Pink" width="74" height="23">
+        </a>
+        <nav class="main-navigation">
+          <div class="main-navigation__wrapper">
+            <button class="main-navigation__toggle main-navigation--open" type="button" aria-label="Открыть меню"></button>
+            <ul class="main-navigation__list">
+              <li class="main-navigation__item">
+                <a>Главная</a>
+              </li>
+              <li class="main-navigation__item">
+                <a href="photos.html">Фотографии</a>
+              </li>
+              <li class="main-navigation__item">
+                <a href="contest.html">Конкурс</a>
+              </li>
+              <li class="main-navigation__item">
+                <a href="https://htmlacademy.ru/intensive/adaptive">Html academy</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
     <main class="page-main">
       <h1 class="visually-hidden">Приложение Pink</h1>
       <section class="download">
-        <div class="download__wrapper">
-          <header class="download__header">
-            <h2 class="visually-hidden">Ссылки на загрузку приложения Pink</h2>
-            <p class="download__slogan">Взгляните на жизнь иначе!</p>
-          </header>
-          <a class="download__link-default" href="https://www.apple.com/ru/app-store/">Скачать приложение</a>
-          <ul class="download__links-list">
-            <li class="download__links-item"><a href="#!" aria-label="Apple-store">Apple</a></li>
-            <li class="download__links-item"><a href="#!" aria-label="Play-Market">Android</a></li>
-            <li class="download__links-item"><a href="#!" aria-label="Windows-store">Microsoft</a></li>
-          </ul>
-          <small class="download__legend">
-            Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
-          </small>
+        <div class="download__layout">
+          <div class="download__wrapper">
+            <header class="download__header">
+              <h2 class="visually-hidden">Ссылки на загрузку приложения Pink</h2>
+              <p class="download__slogan">Взгляните на жизнь иначе!</p>
+            </header>
+            <a class="download__link-default" href="https://www.apple.com/ru/app-store/">Скачать приложение</a>
+            <ul class="download__links-list">
+              <li class="download__links-item"><a href="#!" aria-label="Apple-store">Apple</a></li>
+              <li class="download__links-item"><a href="#!" aria-label="Play-Market">Android</a></li>
+              <li class="download__links-item"><a href="#!" aria-label="Windows-store">Microsoft</a></li>
+            </ul>
+            <small class="download__legend">
+              Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
+            </small>
+          </div>
         </div>
         </section>
         <section class="advantages">
@@ -166,29 +170,31 @@
                 <dd class="contacts__discription">ул. Большая Конюшенная, 19/8</dd>
               </div>
             </dl>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002935!2d30.320858715847518!3d59.93871916905446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1605265008587!5m2!1sru!2sru" width="300" height="450" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002935!2d30.320858715847518!3d59.93871916905446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1605265008587!5m2!1sru!2sru" width="100%" height="450" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
           </div>
         </section>
         <footer class="page-footer">
-          <div class="page-footer__logo">
-            <img src="https://via.placeholder.com/150x150" alt="Приложение Pink" width="150" height="150">
-          </div>
-          <div class="social">
-            <ul class="social__list">
-              <li class="social__item">
-                <a href="#!" class="social__link social__link--twitter" aria-label="Мы в Твиттере"></a>
-              </li>
-              <li class="social__item">
-                <a href="#!" class="social__link social__link--facebook" aria-label="Мы в Фейсбуке"></a>
-              </li>
-              <li class="social__item">
-                <a href="#!" class="social__link social__link--youtube" aria-label="Мы в Ютубе"></a>
-              </li>
-            </ul>
-          </div>
-          <div class="copyright">
-            <b class="copyright__text">Разработано:</b>
-            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          <div class="page-footer__wrapper">
+            <div class="page-footer__logo">
+              <img src="https://via.placeholder.com/150x150" alt="Приложение Pink" width="150" height="150">
+            </div>
+            <div class="social">
+              <ul class="social__list">
+                <li class="social__item">
+                  <a href="#!" class="social__link social__link--twitter" aria-label="Мы в Твиттере"></a>
+                </li>
+                <li class="social__item">
+                  <a href="#!" class="social__link social__link--facebook" aria-label="Мы в Фейсбуке"></a>
+                </li>
+                <li class="social__item">
+                  <a href="#!" class="social__link social__link--youtube" aria-label="Мы в Ютубе"></a>
+                </li>
+              </ul>
+            </div>
+            <div class="copyright">
+              <b class="copyright__text">Разработано:</b>
+              <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+            </div>
           </div>
         </footer>
     </main>

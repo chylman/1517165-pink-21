@@ -8,32 +8,36 @@
 </head>
 <body class="page-body">
   <header class="page-header">
-    <a class="page-header__logo">
-      <img src="https://via.placeholder.com/150x150" alt="Приложение Pink" width="150" height="150">
-    </a>
-    <nav class="main-navigation">
-      <div class="main-navigation__wrapper">
-        <button class="main-navigation__toggle" aria-label="Открыть меню" type="button"></button>
-        <ul class="main-navigation__list">
-          <li class="main-navigation__item">
-            <a href="index.html">Главная</a>
-          </li>
-          <li class="main-navigation__item">
-            <a href="#!">Фотографии</a>
-          </li>
-          <li class="main-navigation__item">
-            <a href="contest.html">Конкурс</a>
-          </li>
-          <li class="main-navigation__item">
-            <a href="https://htmlacademy.ru/intensive/adaptive">Html academy</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <div class="page-header__wrapper">
+      <a class="page-header__logo">
+        <img src="./img/pink-logo-mobile.svg" alt="Приложение Pink" width="74" height="23">
+      </a>
+      <nav class="main-navigation">
+        <div class="main-navigation__wrapper">
+          <button class="main-navigation__toggle main-navigation--open" type="button" aria-label="Открыть меню"></button>
+          <ul class="main-navigation__list">
+            <li class="main-navigation__item">
+              <a href="index.html">Главная</a>
+            </li>
+            <li class="main-navigation__item">
+              <a href="photos.html">Фотографии</a>
+            </li>
+            <li class="main-navigation__item">
+              <a href="contest.html">Конкурс</a>
+            </li>
+            <li class="main-navigation__item">
+              <a href="https://htmlacademy.ru/intensive/adaptive">Html academy</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
   </header>
   <main class="page-main">
     <section class="intro">
-      <h1 class="intro__title">Фотографии пользователей</h1>
+      <div class="intro__wrapper">
+        <h1 class="intro__title">Фотографии<br>пользователей</h1>
+      </div>
     </section>
     <section class="photos">
       <h2 class="visually-hidden">Галерея постов</h2>
@@ -43,7 +47,7 @@
         </p>
         <ul class="photos__list">
           <li class="photos__item">
-            <article class="photos__item">
+            <article class="photos__item-wrapper">
               <h3 class="visually-hidden">Карточка поста</h3>
               <a href="#">
                 <img class="photos__image" src="https://via.placeholder.com/200x200" alt="Пользовательская фотография">
@@ -55,7 +59,7 @@
             </article>
           </li>
           <li class="photos__item">
-            <article class="photos__item">
+            <article class="photos__item-wrapper">
               <h3 class="visually-hidden">Карточка поста</h3>
               <a href="#">
                 <img class="photos__image" src="https://via.placeholder.com/200x200" alt="Пользовательская фотография">
@@ -67,7 +71,7 @@
             </article>
           </li>
           <li class="photos__item">
-            <article class="photos__item">
+            <article class="photos__item-wrapper">
               <h3 class="visually-hidden">Карточка поста</h3>
               <a href="#">
                 <img class="photos__image" src="https://via.placeholder.com/200x200" alt="Пользовательская фотография">
@@ -79,7 +83,7 @@
             </article>
           </li>
           <li class="photos__item">
-            <article class="photos__item">
+            <article class="photos__item-wrapper">
               <h3 class="visually-hidden">Карточка поста</h3>
               <a href="#">
                 <img class="photos__image" src="https://via.placeholder.com/200x200" alt="Пользовательская фотография">
@@ -91,7 +95,7 @@
             </article>
           </li>
           <li class="photos__item">
-            <article class="photos__item">
+            <article class="photos__item-wrapper">
               <h3 class="visually-hidden">Карточка поста</h3>
               <a href="#">
                 <img class="photos__image" src="https://via.placeholder.com/200x200" alt="Пользовательская фотография">
@@ -103,7 +107,7 @@
             </article>
           </li>
           <li class="photos__item">
-            <article class="photos__item">
+            <article class="photos__item-wrapper">
               <h3 class="visually-hidden">Карточка поста</h3>
               <a href="#">
                 <img class="photos__image" src="https://via.placeholder.com/200x200" alt="Пользовательская фотография">
@@ -115,7 +119,7 @@
             </article>
           </li>
           <li class="photos__item">
-            <article class="photos__item">
+            <article class="photos__item-wrapper">
               <h3 class="visually-hidden">Карточка поста</h3>
               <a href="#">
                 <img class="photos__image" src="https://via.placeholder.com/200x200" alt="Пользовательская фотография">
@@ -132,43 +136,49 @@
     <section class="photo-post">
       <h2 class="visually-hidden">Инструмент обработки изображений</h2>
       <div class="photo-post__wrapper">
-        <p class="photo-post__preview">
-          Затмите их всех! Выкладывайте все, что накопилось в телефоне!
-        </p>
-        <form class="photo-post__form" action="https://echo.htmlacademy.ru" method="post">
-          <img class="photo-post__image" src="https://via.placeholder.com/100x100" alt="Пользовательская фотография для обработки">
-          <button class="photo-post__button-select photo-post__button-select--crop photo-post__button-select--current" type="button" aria-label="Обрезать"></button>
-          <button class="photo-post__button-select photo-post__button-select--fill" type="button" aria-label="Заливка"></button>
-          <button class="photo-post__button-select photo-post__button-select--contrast" type="button" aria-label="Контраст"></button>
-          <input class="photo-post__range photo-post__range--current" type="range" name="range-crop" min="1" max="100">
-          <input class="photo-post__range" type="range" name="range-fill" min="1" max="100">
-          <input class="photo-post__range" type="range" name="range-contrast" min="1" max="100">
-          <button class="photo-post__button photo-post__button--submit" type="submit">Запостить</button>
-          <button class="photo-post__button photo-post__button--reset" type="reset">Отмена</button>
-        </form>
+        <div class="photo-post__preview-wrapper">
+          <p class="photo-post__preview">
+            Затмите их всех! Выкладывайте все, что накопилось в телефоне!
+          </p>
+        </div>
+        <div class="photo-post__form-wrapper">
+          <form class="photo-post__form" action="https://echo.htmlacademy.ru" method="post">
+            <img class="photo-post__image" src="https://via.placeholder.com/100x100" alt="Пользовательская фотография для обработки">
+            <button class="photo-post__button-select photo-post__button-select--crop photo-post__button-select--current" type="button" aria-label="Обрезать"></button>
+            <button class="photo-post__button-select photo-post__button-select--fill" type="button" aria-label="Заливка"></button>
+            <button class="photo-post__button-select photo-post__button-select--contrast" type="button" aria-label="Контраст"></button>
+            <input class="photo-post__range photo-post__range--current" type="range" name="range-crop" min="1" max="100">
+            <input class="photo-post__range" type="range" name="range-fill" min="1" max="100">
+            <input class="photo-post__range" type="range" name="range-contrast" min="1" max="100">
+            <button class="photo-post__button photo-post__button--submit" type="submit">Запостить</button>
+            <button class="photo-post__button photo-post__button--reset" type="reset">Отмена</button>
+          </form>
+        </div>
       </div>
     </section>
   </main>
   <footer class="page-footer">
-    <div class="page-footer__logo">
-      <img src="https://via.placeholder.com/150x150" alt="Приложение Pink" width="150" height="150">
-    </div>
-    <div class="social">
-      <ul class="social__list">
-        <li class="social__item">
-          <a href="#!" class="social__link social__link--twitter" aria-label="Мы в Твиттере">twitter</a>
-        </li>
-        <li class="social__item">
-          <a href="#!" class="social__link social__link--facebook" aria-label="Мы в Фейсбуке">facebook</a>
-        </li>
-        <li class="social__item">
-          <a href="#!" class="social__link social__link--youtube" aria-label="Мы в Ютубе">youtube</a>
-        </li>
-      </ul>
-    </div>
-    <div class="copyright">
-      <b class="copyright__text">Разработано:</b>
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+    <div class="page-footer__wrapper">
+      <div class="page-footer__logo">
+        <img src="https://via.placeholder.com/150x150" alt="Приложение Pink" width="150" height="150">
+      </div>
+      <div class="social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a href="#!" class="social__link social__link--twitter" aria-label="Мы в Твиттере"></a>
+          </li>
+          <li class="social__item">
+            <a href="#!" class="social__link social__link--facebook" aria-label="Мы в Фейсбуке"></a>
+          </li>
+          <li class="social__item">
+            <a href="#!" class="social__link social__link--youtube" aria-label="Мы в Ютубе"></a>
+          </li>
+        </ul>
+      </div>
+      <div class="copyright">
+        <b class="copyright__text">Разработано:</b>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      </div>
     </div>
   </footer>
 </body>
