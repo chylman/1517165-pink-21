@@ -2,8 +2,22 @@
   background: linear-gradient(176deg, @basic-white, @basic-white 90%, @basic-gray 90%, @basic-gray 100%);
 }
 
+.reviews__wrapper {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @media (min-width: @desktop-width) {
+    padding: 0 130px;
+  }
+}
+
 .reviews__list {
   .reset-ul();
+}
+
+.reviews__item:not(:first-child) {
+  display: none;
 }
 
 .reviews__title {
@@ -15,6 +29,12 @@
   line-height: 30px;
   text-align: center;
   color: @basic-black;
+
+  @media (min-width: @desktop-width) {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .reviews__text {
@@ -26,6 +46,11 @@
   line-height: 30px;
   text-align: center;
   color: @basic-grayfont;
+
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
+    line-height: 30px;
+  }
 }
 
 .reviews__button-wrapper button {

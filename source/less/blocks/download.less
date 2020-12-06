@@ -1,43 +1,61 @@
 .download {
+  margin-top: -66px;
   background-color: @basic-darkgray;
-}
+  background-image: url("../img/back-mobile.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100% ;
 
-@media (min-width: @tablet-width) {
-  .download {
-    background-image: url("../img/phone.png"), url("../img/screen.png"), url("../img/back-mobile.png");
-    background-repeat: no-repeat, no-repeat, no-repeat;
-    background-position: bottom center, center, top;
-    background-size: auto, auto, 100%;
+  @media (min-width: @tablet-width) {
+    margin-top: -110px;
+    background-image: url("../img/back-tablet.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: -110px;
+    background-image: url("../img/back-desktop.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
   }
 }
 
-@media (min-width: @tablet-width) {
-  .download__wrapper {
-    width: 50%;
+.download__layout {
+  display: grid;
+  max-width: 1180px;
+  padding: 0 20px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0 130px;
   }
 }
 
-@media (min-width: @desktop-width) {
-  .download__wrapper {
-    width: 33%;
+.download__wrapper {
+  @media (min-width: @desktop-width) {
+    min-width: 300px;
   }
 }
+
+
 
 .download__header {
   min-height: 396px;
-  padding-top: 28px;
-  background-image: url("../img/phone.png"), url("../img/back-mobile.png");
-  background-repeat: no-repeat, no-repeat;
-  background-position: bottom left, top;
-  background-size: auto, 100%;
-}
+  padding-top: 95px;
 
-@media (min-width: @tablet-width) {
-  .download__header {
-    min-height: auto;
-    padding-top: 102px;
-    background: none;
-  }
+  @media (min-width: @tablet-width) {
+      min-height: auto;
+      padding-top: 102px;
+      background: none;
+    }
 }
 
 .download__slogan {
@@ -48,6 +66,12 @@
   line-height: 120%;
   font-weight: 300;
   text-align: center;
+
+  @media (min-width: @desktop-width) {
+    font-weight: 300;
+    font-size: 50px;
+    line-height: 68px;
+  }
 }
 
 .download__link-default {
