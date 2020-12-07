@@ -1,52 +1,81 @@
-@media (min-width: @tablet-width) {
-  .contest__form-wrapper {
+.contest {
+  @media (min-width: @tablet-width) {
+    background-color: @basic-white;
+  }
+}
+
+.contest__wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: @basic-white;
+
+  @media (min-width: @desktop-width) {
+    padding: 0 130px;
+  }
+}
+
+
+.contest__form-wrapper {
+  @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: column;
   }
 
-  .contest__fieldgroup--change-application {
-    order: 2;
-  }
-
-  .contest__fieldgroup--contacts {
-    order: 3;
-  }
-
-  .contest__fieldgroup--advantages {
-    order: 4;
-  }
-
-  .contest__fieldgroup--emotion {
-    order: 5;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .contest__form-wrapper {
+  @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+}
 
-  .contest__fieldgroup--contacts {
-    grid-column-start: 1;
-    grid-column-end: 3;
+.contest__fieldgroup--change-application {
+  padding-bottom: 54px;
+
+  @media (min-width: @tablet-width) {
+    order: 2;
+  }
+}
+
+.contest__fieldgroup--contacts {
+  padding-top: 42px;
+
+  @media (min-width: @tablet-width) {
+    order: 3;
   }
 
-  .contest__fieldgroup--advantages {
-    grid-column-start: 1;
-    grid-column-end: 3;
-  }
-
-  .contest__fieldgroup--emotion {
+  @media (min-width: @desktop-width) {
     grid-column-start: 1;
     grid-column-end: 3;
   }
 }
 
+.contest__fieldgroup--advantages {
+  @media (min-width: @tablet-width) {
+    order: 4;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+
+.contest__fieldgroup--emotion {
+  background-color: @basic-white;
+
+  @media (min-width: @tablet-width) {
+    order: 5;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+
+
 .contest__legend {
   .reset-p();
-  padding-top: 54px;
-  padding-bottom: 55px;
+  padding: 54px 20px 55px;
   text-align: center;
   font-style: normal;
   font-weight: normal;
@@ -54,18 +83,32 @@
   line-height: 30px;
   color: @basic-grayfont;
   background-color: @basic-white;
-}
 
-.contest__fieldgroup:nth-child(2n) {
-  background-color: @basic-white;
+  @media (min-width: @desktop-width) {
+    padding: 54px 130px 55px;
+  }
 }
 
 .contest__fieldgroup-list {
   .reset-ul;
 }
 
+.contest__fieldgroup-wrapper {
+  padding: 42px 20px 44px;
+}
+
+.contest__fieldgroup:nth-child(2n) .contest__fieldgroup-wrapper {
+  background-color: @basic-gray;
+
+  @media (min-width: @tablet-width) {
+    background-color: @basic-white;
+  }
+}
+
 .contest__fieldgroup {
   .reset-fieldset();
+  position: relative;
+
 
   &--personal-info label {
     padding-left: 43px;
@@ -78,8 +121,6 @@
   }
 
   &--advantages legend {
-    padding-top: 42px;
-    padding-bottom: 44px;
     text-align: center;
     font-style: normal;
     font-weight: normal;
@@ -97,10 +138,6 @@
     color: @basic-grayfont;
   }
 
-  &--contacts {
-    padding-top: 42px;
-  }
-
   &--contacts label {
     padding-left: 43px;
     font-style: normal;
@@ -111,13 +148,7 @@
     color: @basic-pink;
   }
 
-  &--change-application {
-    padding-bottom: 54px;
-  }
-
   &--change-application legend {
-    padding-top: 42px;
-    padding-bottom: 44px;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -136,8 +167,6 @@
   }
 
   &--emotion label {
-    padding-top: 42px;
-    padding-bottom: 44px;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -145,10 +174,6 @@
     text-align: center;
     text-transform: uppercase;
     color: @basic-pink;
-  }
-
-  &--emotion {
-    background-color: @basic-white;
   }
 }
 
@@ -178,6 +203,10 @@
   font-size: 18px;
   line-height: 30px;
   color: @basic-grayfont;
+}
+
+.contest__button-wrapper {
+  padding: 0 20px;
 }
 
 .button {
