@@ -1,14 +1,23 @@
 .page-header {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
-  background-color: @basic-darkgray;
+  position: relative;
+  z-index: 1;
+  background-color: @basic-grayfont;
+
+  @media (min-width: @desktop-width) {
+    background-color: @special-opacityblack30;
+  }
 }
 
-@media (min-width: @desktop-width) {
-  .page-header {
+.page-header__wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0;
+
+  @media (min-width: @desktop-width) {
     flex-direction: row;
+    padding: 0 130px;
   }
 }
 
@@ -16,10 +25,8 @@
   display: flex;
   min-height: 69px;
   padding: 0 20px;
-}
 
-@media (min-width: @tablet-width) {
-  .page-header__logo {
+  @media (min-width: @tablet-width) {
     min-height: 110px;
   }
 }

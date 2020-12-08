@@ -1,14 +1,23 @@
 .page-footer {
+  background-color: @basic-white;
+}
+
+.page-footer__wrapper {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   align-items: center;
   justify-content: center;
-  background-color: @basic-white;
-}
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 20px;
 
-@media (min-width: @tablet-width) {
-  .page-footer {
+  @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 130px;
   }
 }
 

@@ -1,4 +1,5 @@
 .main-navigation {
+  position: relative;
   width: 100%;
 }
 
@@ -28,7 +29,7 @@
 
 .main-navigation__item {
   text-align: center;
-  background: #283645;
+  background: @basic-grayfont;
   box-shadow: 0 1px 0 @basic-black, inset 0 1px 0 @special-opacitygray15;
 }
 
@@ -48,8 +49,41 @@
 
 .main-navigation__toggle {
   position: absolute;
-  width: 23px;
-  height: 23px;
-  background-color: inherit;
+  right: 20px;
+  top: -45px;
+  width: 50px;
+  height: 24px;
+  background-color: @basic-grayfont;
   border: none;
+}
+
+.main-navigation--close.main-navigation__toggle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 4px;
+  border-radius: 1px;
+  background-color: @basic-white;
+  box-shadow: 0 10px 0 0 @basic-white, 0 20px 0 0 @basic-white;
+}
+
+.main-navigation--open.main-navigation__toggle::before,
+.main-navigation--open.main-navigation__toggle::after {
+  content: "";
+  position: absolute;
+  top: auto;
+  left: auto;
+  width: 30px;
+  height: 3px;
+  background-color: @basic-white;
+}
+
+.main-navigation--open.main-navigation__toggle::after {
+  transform: rotate(45deg);
+}
+
+.main-navigation--open.main-navigation__toggle::before {
+  transform: rotate(-45deg);
 }
