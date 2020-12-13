@@ -1,5 +1,9 @@
 .page-footer {
   background-color: @basic-white;
+
+  @media (max-width: @mobile-width-only) {
+    padding-bottom: 51px;
+  }
 }
 
 .page-footer__wrapper {
@@ -7,6 +11,7 @@
   grid-template-rows: 1fr 1fr 1fr;
   align-items: center;
   justify-content: center;
+  row-gap: 41px;
   max-width: 1180px;
   margin: 0 auto;
   padding: 0 20px;
@@ -22,5 +27,13 @@
 }
 
 .page-footer__logo {
-  margin: auto;
+  margin: 0 auto;
+  padding-top: 40px;
+  width: 145px;
+  height: 40px;
+
+  @media (min-width: @tablet-width) {
+    margin: 36px auto 51px;
+    padding-top: 0;
+  }
 }

@@ -23,6 +23,13 @@
   line-height: 120%;
   color: @basic-grayfont;
 
+  @media (min-width: @tablet-width) {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 54px;
+  }
+
   @media (min-width: @desktop-width) {
     font-weight: 300;
     font-size: 50px;
@@ -54,6 +61,15 @@
 .contacts__discription a {
   text-decoration: none;
   color: @basic-pink;
+
+  &:hover {
+    text-decoration: underline;
+    color: @basic-grayfont;
+  }
+
+  &:active {
+    color: fade(@basic-grayfont, 30%);
+  }
 }
 
 .contacts__discription {

@@ -1,5 +1,6 @@
 .download {
-  margin-top: -66px;
+  position: relative;
+  margin-top: -69px;
   background-color: @basic-darkgray;
   background-image: url("../img/back-mobile.png");
   background-repeat: no-repeat;
@@ -7,6 +8,7 @@
   background-size: 100%;
 
   @media (min-width: @tablet-width) {
+    min-height: 728px;
     margin-top: -110px;
     background-image: url("../img/back-tablet.png");
     background-repeat: no-repeat;
@@ -21,6 +23,28 @@
     background-position: top;
     background-size: cover;
   }
+
+  &::before {
+    @media (min-width: @tablet-width) {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      bottom: 0;
+      width: 660px;
+      height: 545px;
+      background-image: url("../img/group-phone-screen-tablet.png");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    @media (min-width: @desktop-width) {
+      bottom: -50px;
+      left: 240px;
+      width: 924px;
+      height: 645px;
+      background-image: url("../img/group-phone-screen-tablet.png");
+    }
+  }
 }
 
 .download__layout {
@@ -30,6 +54,8 @@
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
+    position: relative;
+    z-index: 3;
     grid-template-columns: 1fr 1fr;
   }
 
@@ -46,24 +72,46 @@
 }
 
 .download__header {
+  position: relative;
   min-height: 396px;
   padding-top: 95px;
 
+  &::before {
+    @media (max-width: @mobile-width-only) {
+      content: "";
+      position: absolute;
+      bottom: 30px;
+      left: -20px;
+      width: 320px;
+      height: 286px;
+      background-image: url("../img/group_phone_screen.png");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     min-height: auto;
-    padding-top: 102px;
+    padding-top: 212px;
     background: none;
   }
 }
 
 .download__slogan {
   margin: 0;
+  margin-bottom: 34px;
   padding: 0;
   color: @basic-white;
   font-size: 24px;
   line-height: 120%;
   font-weight: 300;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 48px;
+  }
 
   @media (min-width: @desktop-width) {
     font-weight: 300;
@@ -75,23 +123,40 @@
 .download__link-default {
   display: block;
   box-sizing: border-box;
-  margin-top: 28px;
   margin-bottom: 38px;
   padding: 21px 0;
   color: @basic-white;
   border: 3px solid @basic-white;
-  border-radius: 29px;
+  border-radius: 33px;
   font-weight: bold;
   font-size: 18px;
   line-height: 18px;
   text-decoration: none;
   text-align: center;
+
+  &:hover {
+    background-color: @basic-white;
+    color: @basic-pink;
+  }
+
+  &:active {
+    background-color: @basic-white;
+    color: fade(@basic-pink, 30%);
+  }
 }
 
 .download__links-list {
   .reset-ul();
   display: flex;
+  justify-content: space-around;
   flex-wrap: wrap;
+  min-height: 56px;
+}
+
+.download__links-item {
+  position: relative;
+  width: 47px;
+  height: 56px;
 }
 
 .download__links-item a {
@@ -99,9 +164,43 @@
   color: @basic-white;
 }
 
+.download__links-item--apple a::before {
+  content: "";
+  position: absolute;
+  width: 47px;
+  height: 56px;
+  background-image: url("../img/apple-logo.svg");
+  background-repeat: no-repeat;
+}
+
+.download__links-item--android a::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  width: 43px;
+  height: 47px;
+  background-image: url("../img/android-logo.svg");
+  background-repeat: no-repeat;
+}
+
+.download__links-item--windows a::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  width: 44px;
+  height: 41px;
+  background-image: url("../img/microsoft-logo.svg");
+  background-repeat: no-repeat;
+}
+
 .download__legend {
+  display: block;
+  width: 100%;
+  margin-top: 28px;
+  align-items: center;
   font-weight: 300;
   font-size: 14px;
   line-height: 24px;
   color: @basic-white;
+  text-align: center;
 }

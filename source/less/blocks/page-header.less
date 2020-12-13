@@ -1,6 +1,6 @@
 .page-header {
   position: relative;
-  z-index: 1;
+  z-index: 4;
   background-color: @basic-grayfont;
 
   @media (min-width: @desktop-width) {
@@ -17,20 +17,34 @@
 
   @media (min-width: @desktop-width) {
     flex-direction: row;
+    column-gap: 173px;
     padding: 0 130px;
   }
 }
 
 .page-header__logo {
-  display: flex;
-  min-height: 69px;
-  padding: 0 20px;
+  display: block;
+  width: 53px;
+  height: 23px;
+  margin: 23px 0;
+  padding-left: 20px;
+  line-height: 0;
 
   @media (min-width: @tablet-width) {
-    min-height: 110px;
+    margin: 0;
+    padding-top: 27px;
+    width: 145px;
+    min-height: 109px;
+    box-sizing: border-box;
   }
 }
 
 .page-header__logo img {
+  display: block;
   margin: auto 0;
+
+  @media (min-width: @tablet-width) {
+    width: 145px;
+    height: 40px;
+  }
 }
