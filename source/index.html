@@ -10,7 +10,11 @@
     <header class="page-header">
       <div class="page-header__wrapper">
         <a class="page-header__logo">
-          <img src="./img/pink-logo-mobile.svg" alt="Приложение Pink" width="74" height="23">
+          <picture>
+            <source media="(min-width: 960px)" srcset="./img/logoheader-desktop.svg">
+            <source media="(min-width: 660px)" srcset="./img/logoheader-tablet.svg">
+            <img src="./img/pink-logo-mobile.svg" alt="Приложение Pink" width="74" height="23">
+          </picture>
         </a>
         <nav class="main-navigation">
           <div class="main-navigation__wrapper">
@@ -181,7 +185,10 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <div class="page-footer__logo">
-          <img src="./img/logo-footer-mobile.svg" alt="Приложение Pink" width="145" height="40">
+          <picture>
+            <source media="(min-width: 960px)" srcset="./img/logofooter-desktop.svg">
+            <img src="./img/logo-footer-mobile.svg" alt="Приложение Pink" width="145" height="40">
+          </picture>
         </div>
         <div class="social">
           <ul class="social__list">
