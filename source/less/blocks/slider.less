@@ -1,0 +1,37 @@
+.slider__toggles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 19px;
+  padding-bottom: 60px;
+}
+
+.slider__toggle {
+  .reset-button();
+  position: relative;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: fade(@basic-grayfont, 30%);
+
+  &:hover {
+    background-color: @basic-grayfont;
+  }
+
+  &:active {
+    background-color: fade(@basic-grayfont, 10%);
+  }
+}
+
+.slider__toggle--current::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -3px;
+  width: 12px;
+  height: 12px;
+  box-sizing: border-box;
+  border: solid 3px #283645;
+  border-radius: 50%;
+  background-color: @basic-white;
+}

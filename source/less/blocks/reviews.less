@@ -1,5 +1,22 @@
 .reviews {
-  background: linear-gradient(176deg, @basic-white, @basic-white 90%, @basic-gray 90%, @basic-gray 100%);
+  background: linear-gradient(176deg, @basic-white, @basic-white 95%, @basic-gray 95%, @basic-gray 100%);
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    padding-top: 193px;
+  }
+
+  &::before {
+    @media (min-width: @desktop-width) {
+      content: "";
+      position: absolute;
+      top: 15%;
+      left: calc(50% - 39px);
+      width: 79px;
+      height: 63px;
+      background-image: url("../img/quotes.svg");
+    }
+  }
 }
 
 .reviews__wrapper {
@@ -16,13 +33,21 @@
   .reset-ul();
 }
 
-.reviews__item:not(:first-child) {
-  display: none;
+.reviews__item {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-rows: min-content min-content;
+  }
+
+  &:not(:first-child) {
+    display: none;
+  }
 }
 
 .reviews__title {
-  margin-top: 50px;
-  margin-bottom: 31px;
+  .reset-h3();
+  padding-top: 50px;
+  padding-bottom: 31px;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -30,10 +55,31 @@
   text-align: center;
   color: @basic-black;
 
+  @media (min-width: @tablet-width) {
+    padding-bottom: 49px;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
   @media (min-width: @desktop-width) {
     font-weight: bold;
     font-size: 20px;
     line-height: 30px;
+  }
+}
+
+.reviews__title-addition {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    padding-top: 17px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 30px;
+    color: @basic-grayfont;
   }
 }
 
@@ -47,6 +93,15 @@
   text-align: center;
   color: @basic-grayfont;
 
+  @media (min-width: @tablet-width) {
+    order: -1;
+    margin: 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
   @media (min-width: @desktop-width) {
     font-size: 18px;
     line-height: 30px;
@@ -59,21 +114,34 @@
 
 .reviews__prev {
   display: none;
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    display: block;
+    width: 22px;
+    height: 41px;
+    background-image: url("../img/left-arrow.svg");
+  }
 }
 
 .reviews__next {
   display: none;
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    display: block;
+    width: 22px;
+    height: 41px;
+    background-image: url("../img/right-arrow.svg");
+  }
 }
 
 .reviews__toggles {
-  padding-bottom: 60px;
-}
-
-.reviews__toggle {
-  .reset-button();
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: @basic-grayfont;
-  opacity: 0.3;
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }

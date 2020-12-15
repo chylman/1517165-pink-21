@@ -4,21 +4,59 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    min-height: 435px;
+    background-color: @basic-white;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 200px;
+    padding-bottom: 67px;
+    background-position: left 150px center;
+    background-color: @basic-gray;
   }
 }
 
 .effect__wrapper {
+  position: relative;
   grid-column: ~"2 / 3";
   max-width: 1180px;
   padding: 0 20px 0 0;
 
   @media (min-width: @desktop-width) {
+    grid-column: ~"2 / 4";
     max-width: 570px;
     padding: 0 130px 0 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 54px;
+    left: -310px;
+    width: 238px;
+    height: 276px;
+    background-image: url("../img/timer.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @media (min-width: @desktop-width) {
+      content: "";
+      position: absolute;
+      top: 76px;
+      left: -369px;
+      width: 298px;
+      height: 345px;
+      background-image: url("../img/timer.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
   }
 }
 
 .effect__title {
+  .reset-h2();
+  margin-top: 102px;
   font-style: normal;
   font-weight: bold;
   font-size: 30px;
@@ -27,6 +65,7 @@
   text-shadow: 0 4px 4px @special-opacityblack25;
 
   @media (min-width: @desktop-width) {
+    margin-top: 174px;
     font-weight: bold;
     font-size: 30px;
     line-height: 30px;
@@ -58,5 +97,14 @@
   @media (min-width: @desktop-width) {
     font-size: 18px;
     line-height: 30px;
+  }
+
+  &:hover {
+    text-decoration: underline;
+    color: @basic-grayfont;
+  }
+
+  &:active {
+    color: fade(@basic-grayfont, 30%);
   }
 }

@@ -1,7 +1,36 @@
+.copyright {
+  margin: 0 auto;
+}
+
 .copyright__text {
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
   color: @basic-grayfont;
+
+  @media (min-width: @tablet-width) {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+.copyright__link {
+  .reset-a();
+  position: relative;
+  top: 10px;
+  display: inline-block;
+  width: 27px;
+  padding-left: 15px;
+  cursor: pointer;
+}
+
+.copyright__link:hover path {
+  fill: @basic-grayfont;
+}
+
+.copyright__link:active path {
+  fill: fade(@basic-grayfont, 30%);
 }
