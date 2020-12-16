@@ -25,7 +25,7 @@
   @media (min-width: @tablet-width) {
     min-height: 728px;
     background-image: url("../img/phonescreen-tablet.png");
-    background-position: left 20px bottom -65px;
+    background-position: left 20px bottom -62px;
     background-size: auto auto;
 
     @media (min-resolution: 2dppx) {
@@ -126,11 +126,11 @@
       transform: translate(-50%);
       width: 300px;
       height: 382px;
-      background-image: url("../img/phonescreen1-desktop.png");
+      background-image: url("../img/phonescreen-before-desktop.png");
       background-repeat: no-repeat;
 
       @media (min-resolution: 2dppx) {
-        background-image: url("../img/phonescreen1-desktop@2x.png");
+        background-image: url("../img/phonescreen-before-desktop@2x.png");
         background-size: 300px auto;
       }
     }
@@ -146,11 +146,11 @@
       transform: translate(-50%);
       width: 300px;
       height: 382px;
-      background-image: url("../img/phonescreen2-desktop.png");
+      background-image: url("../img/phonescreen-inprogress-desktop.png");
       background-repeat: no-repeat;
 
       @media (min-resolution: 2dppx) {
-        background-image: url("../img/phonescreen2-desktop@2x.png");
+        background-image: url("../img/phonescreen-inprogress-desktop@2x.png");
         background-size: 300px auto;
       }
     }
@@ -166,11 +166,11 @@
       transform: translate(-50%);
       width: 300px;
       height: 382px;
-      background-image: url("../img/phonescreen3-desktop.png");
+      background-image: url("../img/phonescreen-after-desktop.png");
       background-repeat: no-repeat;
 
       @media (min-resolution: 2dppx) {
-        background-image: url("../img/phonescreen3-desktop@2x.png");
+        background-image: url("../img/phonescreen-after-desktop@2x.png");
         background-size: 300px auto;
       }
     }
@@ -203,6 +203,11 @@
   font-size: 14px;
   line-height: 24px;
   color: @basic-grayfont;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding: 5px 0;
+  }
 
   @media (min-width: @desktop-width) {
     font-size: 18px;

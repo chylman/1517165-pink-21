@@ -7,14 +7,21 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page-body">
+
+
     <header class="page-header">
       <div class="page-header__wrapper">
-        <a class="page-header__logo">
+        <a class="logo">
           <picture>
             <source media="(min-width: 960px)" srcset="./img/logoheader-desktop.svg">
             <source media="(min-width: 660px)" srcset="./img/logoheader-tablet.svg">
             <img src="./img/pink-logo-mobile.svg" alt="Приложение Pink" width="74" height="23">
           </picture>
+          <!-- <svg class="logo__image">
+            <use class="logo__mobile" fill="white" width="74" height="23" xlink:href="./img/logo.svg#logo-mobile"></use>
+            <use class="logo__tablet" fill="white" width="145" height="40" xlink:href="./img/logo.svg#logo-tablet" display="none"></use>
+            <use class="logo__desktop" fill="white" width="147" height="40" xlink:href="./img/logo.svg#logo-desktop" display="none"></use>
+          </svg> -->
         </a>
         <nav class="main-navigation">
           <div class="main-navigation__wrapper">
@@ -48,9 +55,27 @@
             </header>
             <a class="download__link-default" href="https://www.apple.com/ru/app-store/">Скачать приложение</a>
             <ul class="download__links-list">
-              <li class="download__links-item download__links-item--apple"><a href="#!" aria-label="Apple-store"></a></li>
-              <li class="download__links-item download__links-item--android"><a href="#!" aria-label="Play-Market"></a></li>
-              <li class="download__links-item download__links-item--windows"><a href="#!" aria-label="Windows-store"></a></li>
+              <li class="download__links-item download__links-item--apple">
+                <a href="#!" aria-label="Apple-store">
+                  <svg class="download__apple-icon">
+                    <use xlink:href="./img/logo.svg#apple-icon"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="download__links-item download__links-item--android">
+                <a href="#!" aria-label="Play-Market">
+                  <svg class="download__android-icon">
+                    <use xlink:href="./img/logo.svg#android-icon"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="download__links-item download__links-item--windows">
+                <a href="#!" aria-label="Windows-store">
+                  <svg class="download__microsoft-icon">
+                    <use xlink:href="./img/logo.svg#microsoft-icon"></use>
+                  </svg>
+                </a>
+              </li>
             </ul>
             <small class="download__legend">
               Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
@@ -75,7 +100,7 @@
               <li class="advantages__item advantages__item--in-progress">
                 <div class="advantages__item-wrapper">
                   <h3 class="advantages__title">Меняет мир вокруг</h3>
-                  <p class="advantages__discription">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+                  <p class="advantages__discription">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффектСделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
                 </div>
               </li>
               <li class="advantages__item advantages__item--after">
@@ -128,29 +153,29 @@
             <table class="price-table">
               <thead class="price-table__header">
                 <tr class="price-table__row">
-                  <th class="price-table__column1 price-table__cell"></th>
-                  <th class="price-table__column2 price-table__cell">База<span>1,99 usd</span></th>
-                  <th class="price-table__column3 price-table__cell price-table__cell--hit">Стандарт<span>3,99 usd</span></th>
-                  <th class="price-table__column4 ">Анлим<span>9,99 usd</span></th>
+                  <th class="price-table__column-main price-table__cell"></th>
+                  <th class="price-table__column-base price-table__cell">База<span>1,99 usd</span></th>
+                  <th class="price-table__column-standart price-table__cell price-table__cell--hit">Стандарт<span>3,99 usd</span></th>
+                  <th class="price-table__column-unlim ">Анлим<span>9,99 usd</span></th>
                 </tr>
               </thead>
               <tr class="price-table__row">
-                <td class="price-table__column1"><span>Розовый фильтр</span></td>
-                <td class="price-table__column2 price-table__cell price-table__cell--yes"><span class="price-table__text-hidden">Розовый фильтр</span></td>
-                <td class="price-table__column3 price-table__cell price-table__cell--yes"><span class="price-table__text-hidden">Розовый фильтр</span></td>
-                <td class="price-table__column4 price-table__cell price-table__cell--yes"><span class="price-table__text-hidden">Розовый фильтр</span></td>
+                <td class="price-table__column-main"><span>Розовый фильтр</span></td>
+                <td class="price-table__column-base price-table__cell price-table__cell--yes"><span class="price-table__text-hidden">Розовый фильтр</span></td>
+                <td class="price-table__column-standart price-table__cell price-table__cell--yes"><span class="price-table__text-hidden">Розовый фильтр</span></td>
+                <td class="price-table__column-unlim price-table__cell price-table__cell--yes"><span class="price-table__text-hidden">Розовый фильтр</span></td>
               </tr>
               <tr class="price-table__row">
-                <td class="price-table__column1"><span>Смайлики</span></td>
-                <td class="price-table__column2 price-table__cell price-table__cell--no"><span class="price-table__text-hidden">Смайлики</span></td>
-                <td class="price-table__column3 price-table__cell price-table__cell--yes"><span class="price-table__text-hidden">Смайлики</span></td>
-                <td class="price-table__column4 price-table__cell price-table__cell--yes"><span class="price-table__text-hidden">Смайлики</span></td>
+                <td class="price-table__column-main"><span>Смайлики</span></td>
+                <td class="price-table__column-base price-table__cell price-table__cell--no"><span class="price-table__text-hidden">Смайлики</span></td>
+                <td class="price-table__column-standart price-table__cell price-table__cell--yes"><span class="price-table__text-hidden">Смайлики</span></td>
+                <td class="price-table__column-unlim price-table__cell price-table__cell--yes"><span class="price-table__text-hidden">Смайлики</span></td>
               </tr>
               <tr class="price-table__row">
-                <td class="price-table__column1"><span>Комментарии</span></td>
-                <td class="price-table__column2 price-table__cell price-table__cell--no"><span class="price-table__text-hidden">Комментарии</span></td>
-                <td class="price-table__column3 price-table__cell price-table__cell--no"><span class="price-table__text-hidden">Комментарии</span></td>
-                <td class="price-table__column4 price-table__cell price-table__cell--yes"><span class="price-table__text-hidden">Комментарии</span></td>
+                <td class="price-table__column-main"><span>Комментарии</span></td>
+                <td class="price-table__column-base price-table__cell price-table__cell--no"><span class="price-table__text-hidden">Комментарии</span></td>
+                <td class="price-table__column-standart price-table__cell price-table__cell--no"><span class="price-table__text-hidden">Комментарии</span></td>
+                <td class="price-table__column-unlim price-table__cell price-table__cell--yes"><span class="price-table__text-hidden">Комментарии</span></td>
               </tr>
             </table>
             <div class="price__toggles slider__toggles">
@@ -206,8 +231,8 @@
         <div class="copyright">
           <b class="copyright__text">Разработано</b>
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">
-            <svg class="copyright__icon" width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z" fill="#D22856"/>
+            <svg class="copyright__icon">
+             <use class="copyright__icon" width="27" height="23" xlink:href="./img/logo.svg#copyright-icon" fill="#D22856"></use>
             </svg>
           </a>
         </div>
