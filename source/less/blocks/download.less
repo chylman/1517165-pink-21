@@ -27,7 +27,7 @@
   @media (min-width: @desktop-width) {
     margin-top: -110px;
     background-image: url("../img/back-desktop.jpg");
-    background-position: top;
+    background-position: bottom;
     background-size: 100% auto;
 
     @media (min-resolution: 2dppx) {
@@ -47,6 +47,7 @@
       background-image: url("../img/handphone-tablet.png");
       background-repeat: no-repeat;
       background-size: 100% auto;
+      border: none;
 
       @media (min-resolution: 2dppx) {
         background-image: url("../img/handphone-tablet@2x.png");
@@ -55,11 +56,12 @@
 
     @media (min-width: @desktop-width) {
       bottom: 0;
-      left: 240px;
-      width: 1050px;
+      left: 30%;
+      width: 650px;
       height: 645px;
       background-image: url("../img/handphone-desktop.png");
       background-size: 100% auto;
+      background-position: bottom;
 
       @media (min-resolution: 2dppx) {
         background-image: url("../img/handphone-desktop@2x.png");
@@ -183,37 +185,26 @@
 }
 
 .download__links-item a {
+  display: block;
+  width: 47px;
+  height: 56px;
   text-decoration: none;
   color: @basic-white;
 }
 
-.download__links-item--apple a::before {
-  content: "";
-  position: absolute;
+.download__apple-icon {
   width: 47px;
   height: 56px;
-  background-image: url("../img/apple-logo.svg");
-  background-repeat: no-repeat;
 }
 
-.download__links-item--android a::before {
-  content: "";
-  position: absolute;
-  top: 6px;
+.download__android-icon {
   width: 43px;
   height: 47px;
-  background-image: url("../img/android-logo.svg");
-  background-repeat: no-repeat;
 }
 
-.download__links-item--windows a::before {
-  content: "";
-  position: absolute;
-  top: 12px;
+.download__microsoft-icon {
   width: 44px;
   height: 41px;
-  background-image: url("../img/microsoft-logo.svg");
-  background-repeat: no-repeat;
 }
 
 .download__legend {

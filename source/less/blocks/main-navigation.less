@@ -19,6 +19,7 @@
   .main-navigation__list {
     flex-direction: row;
     justify-content: space-between;
+    row-gap: 10px;
     padding-top: 46px;
     text-transform: none;
     font-style: normal;
@@ -40,6 +41,7 @@
 
 @media (min-width: @desktop-width) {
   .main-navigation__item {
+    padding-left: 5px;
     text-align: unset;
     background: none;
     box-shadow: none;
@@ -116,13 +118,11 @@
 .main-navigation--open:hover.main-navigation__toggle::before,
 .main-navigation--open:hover.main-navigation__toggle::after {
   background-color: @basic-pink;
-  box-shadow: @basic-pink, @basic-pink;
 }
 
 .main-navigation--open:active.main-navigation__toggle::before,
 .main-navigation--open:active.main-navigation__toggle::after {
   background-color: fade(@basic-pink, 30%);
-  box-shadow: fade(@basic-pink, 30%), fade(@basic-pink, 30%);
 }
 
 .main-navigation--open.main-navigation__toggle::after {
@@ -131,4 +131,8 @@
 
 .main-navigation--open.main-navigation__toggle::before {
   transform: rotate(-45deg);
+}
+
+.main-navigation--no-js.main-navigation__toggle {
+  display: none;
 }

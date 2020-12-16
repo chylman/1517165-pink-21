@@ -9,7 +9,7 @@
   }
 }
 
-.price-table__column3 {
+.price-table__column-standart {
   display: block;
   width: 280px;
 
@@ -18,15 +18,19 @@
   }
 }
 
-.price-table__column2 .price-table__text-hidden,
-.price-table__column4 .price-table__text-hidden {
+.price-table__column-base .price-table__text-hidden,
+.price-table__column-unlim .price-table__text-hidden {
   display: none;
 }
 
-.price-table__column1,
-.price-table__column2,
-.price-table__column3,
-.price-table__column4 {
+.price-table__column-main:first-child {
+  border: none;
+}
+
+.price-table__column-main,
+.price-table__column-base,
+.price-table__column-standart,
+.price-table__column-unlim {
   min-width: 153px;
   box-sizing: border-box;
   padding-top: 20px;
@@ -38,7 +42,7 @@
   }
 }
 
-.price-table__column1 {
+.price-table__column-main {
   @media (min-width: @tablet-width) {
     box-sizing: border-box;
     padding: 18px 15px;
@@ -64,7 +68,7 @@
   background-color: @basic-grayfont;
 }
 
-.price-table__header .price-table__column1 {
+.price-table__header .price-table__column-main {
   background-color: @basic-gray;
 }
 

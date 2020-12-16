@@ -1,0 +1,67 @@
+.logo {
+  display: block;
+  width: 53px;
+  height: 23px;
+  margin: 23px 0;
+  padding-left: 20px;
+  line-height: 0;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding-top: 27px;
+    width: 145px;
+    min-height: 109px;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 0;
+  }
+}
+
+.logo img {
+  display: block;
+  margin: auto 0;
+
+  @media (min-width: @tablet-width) {
+    width: 145px;
+    height: 40px;
+  }
+}
+
+.logo:hover .logo__mobile,
+.logo:hover .logo__tablet,
+.logo:hover .logo__desktop {
+  fill: @basic-pink;
+}
+
+.logo:active .logo__mobile,
+.logo:active .logo__tablet,
+.logo:active .logo__desktop {
+  fill: fade(@basic-white, 30%);
+}
+
+@media (min-width: @tablet-width) {
+  .logo__mobile {
+    display: none;
+  }
+
+  .logo__tablet {
+    display: block;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .logo__tablet {
+    display: none;
+  }
+
+  .logo__desktop {
+    display: block;
+  }
+}
+
+.logo__image {
+  width: 147px;
+  height: 40px;
+}
