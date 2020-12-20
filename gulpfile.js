@@ -29,7 +29,7 @@ const styles = () => {
     .pipe(rename("style.min.css"))
     .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
-}
+};
 
 exports.styles = styles;
 
@@ -38,8 +38,9 @@ exports.styles = styles;
 const html = () => {
   return gulp.src("source/*.html")
     .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest("build"));
-}
+    .pipe(gulp.dest("build"))
+    .pipe(sync.stream());
+};
 
 exports.html = html;
 
@@ -51,7 +52,7 @@ const scripts = () => {
     .pipe(rename("script.min.js"))
     .pipe(gulp.dest("build/js"))
     .pipe(sync.stream());
-}
+};
 
 exports.scripts = scripts;
 
@@ -65,7 +66,7 @@ const images = () => {
       imagemin.svgo()
     ]))
     .pipe(gulp.dest("build/img"))
-}
+};
 
 exports.images = images;
 
@@ -75,7 +76,7 @@ const createWebp = () => {
   return gulp.src("source/img/**/*.{ipg,png}")
     .pipe(webp({quality: 90}))
     .pipe(gulp.dest("build/img"))
-}
+};
 
 exports.createWebp = createWebp;
 
@@ -83,7 +84,7 @@ exports.createWebp = createWebp;
 
 const clean = () => {
   return del("build")
-}
+};
 
 exports.clean = clean;
 
@@ -95,7 +96,7 @@ const sprite = () => {
     .pipe(svgstore())
     .pipe(rename("sprite.svg"))
     .pipe(gulp.dest("build/img"));
-}
+};
 
 exports.sprite = sprite;
 
@@ -105,14 +106,15 @@ const copy = (done) => {
   return gulp.src([
     "source/fonts/*.{woff,woff2}",
     "source/*.ico",
-    "source/img/**/*.{jpg,png,svg}"
+    "source/img/**/*.{jpg,png,svg}",
+    "source/css/*.css"
   ], {
     base: "source"
   })
 
     .pipe(gulp.dest("build"));
     done();
-}
+};
 
 exports.copy = copy;
 
@@ -129,7 +131,7 @@ const server = (done) => {
     ui: false,
   });
   done();
-}
+};
 
 exports.server = server;
 
@@ -137,8 +139,10 @@ exports.server = server;
 
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series("styles"));
+  gulp.watch("source/js/scripts.js", gulp.series("scripts"));
   gulp.watch("source/*.html").on("change", sync.reload);
-}
+  gulp.watch("source/*.html").on("change", gulp.series("html"));
+};
 
 //Build
 
@@ -162,9 +166,7 @@ exports.default = gulp.series (
     styles,
     html,
     scripts,
-    createWebp,
     sprite,
-    images,
     copy
   ),
   gulp.series (

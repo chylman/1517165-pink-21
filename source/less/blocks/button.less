@@ -1,9 +1,10 @@
 .button {
   .reset-button();
+  box-sizing: border-box;
   width: 100%;
   margin-bottom: 69px;
   margin-top: 75px;
-  padding: 23px 45px;
+  padding: 23px 43px;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -12,5 +13,21 @@
   color: @basic-white;
   background: @basic-green;
   border: 2px solid @basic-green;
-  border-radius: 1px;
+  border-radius: 2px;
+}
+
+.button:hover {
+  background-color: @special-green;
+  border-color: @special-green;
+}
+
+.button:active {
+  background-color: @special-green;
+  border-color: @special-green;
+  color: fade(@basic-white, 30%);
+}
+
+.button:disabled {
+  background-color: @special-gray;
+  border-color: @special-gray;
 }
