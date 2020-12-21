@@ -50,15 +50,47 @@
 }
 
 .photo-post__image {
+  display: block;
+  width: 100%;
+  height: auto;
   margin-bottom: 42px;
+  background-color: @special-gray;
+}
+
+.photo-post__button-select-wrapper {
+  display: flex;
+  justify-content: center;
+  column-gap: 35px;
 }
 
 .photo-post__button-select {
   .reset-button();
+  cursor: pointer;
   width: 44px;
   height: 44px;
   margin-bottom: 39px;
-  background-color: @basic-darkgray;
+}
+
+.photo-post__button-select .photo-post__button-select-icon {
+  margin: auto;
+}
+
+.photo-post__button-select--current .photo-post__button-select-icon,
+.photo-post__button-select--current g {
+  fill: @basic-pink;
+  opacity: 1;
+}
+
+.photo-post__button-select:hover .photo-post__button-select-icon,
+.photo-post__button-select:hover g {
+  fill: @basic-grayfont;
+  opacity: 0.5;
+}
+
+.photo-post__button-select:active .photo-post__button-select-icon,
+.photo-post__button-select:active g {
+  fill: @basic-pink;
+  opacity: 1;
 }
 
 .photo-post__range {
