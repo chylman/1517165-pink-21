@@ -177,11 +177,17 @@
   }
 
   &--advantages label {
+    display: block;
+    padding-left: 59px;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 30px;
     color: @basic-grayfont;
+
+    @media (min-width: @tablet-width) {
+      padding-left: 57px;
+    }
   }
 
   &--contacts label {
@@ -301,7 +307,7 @@
 
   @media (min-width: @desktop-width) {
     display: flex;
-    column-gap: 74px;
+    column-gap: 5%;
   }
 }
 
@@ -323,13 +329,14 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: min-content min-content;
+    grid-auto-flow: column;
+    padding-left: 60px;
     padding-top: 50px;
   }
 }
 
 .contest__fieldgroup--advantages .contest__fieldgroup-item {
   position: relative;
-  padding-left: 59px;
 
   &:first-child {
     margin-top: 50px;
@@ -341,10 +348,6 @@
 
   &:not(:last-child) {
     margin-bottom: 60px;
-  }
-
-  @media (min-width: @tablet-width) {
-    padding-left: 119px;
   }
 }
 
@@ -369,6 +372,10 @@
 
     @media (min-width: @tablet-width) {
       left: 62px;
+    }
+
+    @media (min-width: @tablet-width) {
+      left: 0;
     }
   }
 }
@@ -396,7 +403,7 @@
   background: url("../img/icon/tick.svg") no-repeat;
 
   @media (min-width: @tablet-width) {
-    left: 69px;
+    left: 6px;
   }
 }
 
@@ -505,13 +512,15 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: calc(100% - 74px);
+    width: calc(100% - 30%);
     margin: 41px 62px 22px;
   }
 }
 
 .contest__phone-number {
   @media (min-width: @tablet-width) {
+    box-sizing: border-box;
+    padding-right: 60px;
     background-image: url("../img/icon/phone-icon.svg");
     background-size: 59px 59px;
     background-position: right;
@@ -521,6 +530,8 @@
 
 .contest__email {
   @media (min-width: @tablet-width) {
+    box-sizing: border-box;
+    padding-right: 60px;
     background-image: url("../img/icon/mail-icon.svg");
     background-size: 59px 59px;
     background-position: right;

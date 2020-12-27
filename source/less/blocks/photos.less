@@ -67,11 +67,26 @@
 .photos__item:first-child .photos__link {
   position: relative;
   left: -20px;
+
+  @media (min-width: @desktop-width) {
+    left: -130px;
+  }
 }
 
-.photos__image {
+.photos__item:first-child .photos__image {
   display: block;
-  width: 100% auto;
+  width: calc(100% + 40px);
+  height: auto;
+
+  @media (min-width: @desktop-width) {
+    width: calc(100% + 260px);
+  }
+}
+
+.photos__item:not(:first-child) .photos__image {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .photos__name {

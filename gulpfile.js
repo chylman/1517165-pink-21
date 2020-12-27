@@ -21,12 +21,11 @@ const styles = () => {
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(less())
-    .pipe(postcss([
-      autoprefixer(),
-      csso()
-    ]))
-    .pipe(sourcemap.write("."))
+    .pipe(postcss([autoprefixer()]))
+    .pipe(gulp.dest("build/css"))
+    .pipe(postcss([csso()]))
     .pipe(rename("style.min.css"))
+    .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
 };
@@ -140,8 +139,8 @@ exports.server = server;
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series("styles"));
   gulp.watch("source/js/scripts.js", gulp.series("scripts"));
-  gulp.watch("source/*.html").on("change", sync.reload);
   gulp.watch("source/*.html").on("change", gulp.series("html"));
+  gulp.watch("source/*.html").on("change", sync.reload);
 };
 
 //Build
