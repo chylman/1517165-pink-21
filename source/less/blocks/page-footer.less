@@ -37,3 +37,26 @@
     padding-top: 0;
   }
 }
+
+.page-footer__logo-image--desktop {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
+}
+
+.page-footer__logo-image--mobile {
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.page-footer__logo:hover path {
+  fill: @basic-pink;
+}
+
+.page-footer__logo:active path {
+  opacity: 0.3;
+  fill: initial;
+}
