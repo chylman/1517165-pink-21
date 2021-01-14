@@ -1,9 +1,29 @@
 .modal {
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   display: none;
+  max-height: 80vh;
+
+
+  box-sizing: border-box;
+  background-color: @basic-white;
+
+  @media (min-width: @tablet-width) {
+    max-width: calc(100% - 200px);
+    margin: auto;
+    box-shadow: 0 5px 15px @basic-gray;
+  }
 }
 
 .modal__title {
   .reset-h3();
+  box-sizing: border-box;
+  padding: 44px 20px 37px;
+  text-align: center;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -13,10 +33,21 @@
 }
 
 .modal__text {
+  padding: 0 20px;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 24px;
   text-align: center;
   color: @basic-grayfont;
+}
+
+.modal__button-wrapper {
+  background-color: @basic-gray;
+}
+
+.modal .button {
+  box-sizing: border-box;
+  margin: 50px 22px 52px;
+  width: calc(100% - 44px);
 }

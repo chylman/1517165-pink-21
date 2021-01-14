@@ -71,6 +71,25 @@
   @media (min-width: @desktop-width) {
     left: -130px;
   }
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: -20px;
+    display: block;
+    width: 140px;
+    height: 36px;
+    background-image: url("../img/icon/panorama-of-the-day.svg");
+
+    @media (min-width: @tablet-width) {
+      top: 57px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 54px;
+      right: -130px;
+    }
+  }
 }
 
 .photos__item:first-child .photos__image {
