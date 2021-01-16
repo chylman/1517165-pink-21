@@ -112,7 +112,6 @@ const copy = (done) => {
   })
 
     .pipe(gulp.dest("build"));
-    done();
 };
 
 exports.copy = copy;
@@ -129,6 +128,7 @@ const server = (done) => {
     notify: false,
     ui: false,
   });
+  done();
 };
 
 exports.server = server;
