@@ -9,12 +9,13 @@
   }
 }
 
-.price-table__column-standart {
+.price-table__cell--active {
   display: block;
-  width: 280px;
+  width: 85vw;
 
   @media (min-width: @tablet-width) {
     display: table-cell;
+    width: auto;
   }
 }
 
@@ -29,7 +30,7 @@
 
 .price-table__column-main,
 .price-table__column-base,
-.price-table__column-standart,
+.price-table__column-standard,
 .price-table__column-unlim {
   min-width: 153px;
   box-sizing: border-box;
