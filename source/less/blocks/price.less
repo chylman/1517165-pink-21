@@ -1,6 +1,14 @@
 .price {
   margin-top: 80px;
   overflow-x: hidden;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 54px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 151px;
+  }
 }
 
 .price__wrapper {
@@ -21,4 +29,8 @@
 .price__toggles {
   height: 10px;
   padding: 45px 0;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }

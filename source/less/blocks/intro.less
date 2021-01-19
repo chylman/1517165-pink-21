@@ -35,18 +35,23 @@
 
 .intro__wrapper {
   max-width: 1180px;
+  min-height: 238px;
   margin: 0 auto;
   padding: 0 20px;
 
+  @media (min-width: @tablet-width) {
+    min-height: 440px;
+  }
+
   @media (min-width: @desktop-width) {
+    min-height: 394px;
     padding: 0 130px;
   }
 }
 
 .intro__title {
   .reset-h1();
-  padding-top: 102px;
-  padding-bottom: 84px;
+  padding-top: 96px;
   font-style: normal;
   font-weight: 300;
   font-size: 24px;
@@ -55,14 +60,14 @@
   color: @basic-white;
 
   @media (min-width: @tablet-width) {
-    padding-top: 191px;
-    padding-bottom: 143px;
+    padding-top: 177px;
     font-weight: 300;
     font-size: 50px;
     line-height: 68px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 146px;
+    padding-top: 169px;
+    padding-bottom: 0;
   }
 }

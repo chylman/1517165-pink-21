@@ -1,16 +1,16 @@
 .reviews {
-  background: linear-gradient(176deg, @basic-white, @basic-white 95%, @basic-gray 95%, @basic-gray 100%);
+  background: linear-gradient(177deg, @basic-white, @basic-white 87%, @basic-gray 87%, @basic-gray 100%);
 
   @media (min-width: @desktop-width) {
+    padding: 184px 100px 0;
     position: relative;
-    padding-top: 193px;
   }
 
   &::before {
     @media (min-width: @desktop-width) {
       content: "";
       position: absolute;
-      top: 15%;
+      top: 17%;
       left: calc(50% - 39px);
       width: 79px;
       height: 63px;
@@ -46,8 +46,8 @@
 
 .reviews__title {
   .reset-h3();
-  padding-top: 50px;
-  padding-bottom: 31px;
+  padding-top: 41px;
+  padding-bottom: 13px;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -56,7 +56,8 @@
   color: @basic-black;
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 49px;
+    padding-top: 35px;
+    padding-bottom: 39px;
     font-weight: bold;
     font-size: 20px;
     line-height: 30px;
@@ -64,7 +65,7 @@
 
   @media (min-width: @desktop-width) {
     font-weight: bold;
-    font-size: 20px;
+    font-size: 24px;
     line-height: 30px;
   }
 }
@@ -74,18 +75,23 @@
 
   @media (min-width: @tablet-width) {
     display: block;
-    padding-top: 17px;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 30px;
     color: @basic-grayfont;
   }
+
+  @media (min-width: @desktop-width) {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 30px;
+  }
 }
 
 .reviews__text {
   margin: 0;
-  margin-bottom: 44px;
+  margin-bottom: 35px;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -117,8 +123,8 @@
 
   @media (min-width: @desktop-width) {
     position: absolute;
-    top: 50%;
-    left: 5%;
+    top: 52%;
+    left: 11%;
     display: block;
     width: 22px;
     height: 41px;
@@ -131,8 +137,8 @@
 
   @media (min-width: @desktop-width) {
     position: absolute;
-    top: 50%;
-    right: 5%;
+    top: 52%;
+    right: 11%;
     display: block;
     width: 22px;
     height: 41px;

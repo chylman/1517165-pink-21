@@ -38,7 +38,7 @@
     flex-direction: row;
     justify-content: space-between;
     row-gap: 10px;
-    padding-top: 46px;
+    padding-top: 22px;
     text-transform: none;
     font-style: normal;
     font-weight: normal;
@@ -47,6 +47,10 @@
 }
 
 .main-navigation__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 63px;
   text-align: center;
   background: @basic-grayfont;
   border-bottom: 1px solid @basic-black;
@@ -70,7 +74,7 @@
     content: "";
     position: absolute;
     left: 4px;
-    bottom: -13px;
+    bottom: 9px;
     display: block;
     width: 100%;
     height: 2px;
@@ -113,6 +117,10 @@
   height: 24px;
   background-color: @basic-grayfont;
   border: none;
+
+  @media (min-width: @tablet-width) {
+    top: -63px;
+  }
 
   @media (min-width: @desktop-width) {
     display: none;

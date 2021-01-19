@@ -50,7 +50,7 @@
               <a href="contest.html">Конкурс</a>
             </li>
             <li class="main-navigation__item">
-              <a href="https://htmlacademy.ru/intensive/adaptive">Html academy</a>
+              <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
             </li>
           </ul>
         </div>
@@ -69,24 +69,27 @@
         <p class="photos__description">
           Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?
         </p>
+        <a class="photos__panorama" href="#">
+          <div class="photos__panorama-wrapper">
+            <picture>
+              <source media="(min-width: 960px)" srcset="./img/panorama-desktop.webp, ./img/panorama-desktop@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 660px)" srcset="./img/panorama-tablet.webp, ./img/panorama-tablet@2x.webp 2x" type="image/webp">
+              <source srcset="./img/panorama-mobile.webp, ./img/panorama-mobile@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 960px)" srcset="./img/panorama-desktop.jpg, ./img/panorama-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="./img/panorama-tablet.jpg, ./img/panorama-tablet@2x.jpg 2x">
+              <img class="photos__image" src="./img/panorama-mobile.jpg" srcset="./img/panorama-mobile@2x.jpg 2x" alt="Пользовательская фотография">
+            </picture>
+          </div>
+        </a>
         <ul class="photos__list">
           <li class="photos__item">
             <article class="photos__item-wrapper">
               <h3 class="visually-hidden">Карточка поста</h3>
-              <a class="photos__link" href="#">
-                <picture>
-                  <source media="(min-width: 960px)" srcset="./img/panorama-desktop.webp, ./img/panorama-desktop@2x.webp 2x" type="image/webp">
-                  <source media="(min-width: 660px)" srcset="./img/panorama-tablet.webp, ./img/panorama-tablet@2x.webp 2x" type="image/webp">
-                  <source srcset="./img/panorama-mobile.webp, ./img/panorama-mobile@2x.webp 2x" type="image/webp">
-                  <source media="(min-width: 960px)" srcset="./img/panorama-desktop.jpg, ./img/panorama-desktop@2x.jpg 2x">
-                  <source media="(min-width: 660px)" srcset="./img/panorama-tablet.jpg, ./img/panorama-tablet@2x.jpg 2x">
-                  <img class="photos__image" src="./img/panorama-mobile.jpg" srcset="./img/panorama-mobile@2x.jpg 2x" alt="Пользовательская фотография">
-                </picture>
-              </a>
-              <p class="photos__name">Анна</p>
-              <span class="photos__time-ago">(5 минут назад)</span>
-              <p class="photos__text">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
-              <p class="photos__like-text">нравится: <span class="photos__like-number">215</span></p>
+              <div class="photos__item-layout">
+                <p class="photos__name">Анна <span class="photos__time-ago">(5 минут назад)</span></p>
+                <p class="photos__text">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+                <p class="photos__like-text">нравится: <span class="photos__like-number">215</span></p>
+              </div>
             </article>
           </li>
           <li class="photos__item">
@@ -211,7 +214,7 @@
       <div class="photo-post__wrapper">
         <div class="photo-post__preview-wrapper">
           <p class="photo-post__preview">
-            Затмите их всех! Выкладывайте все, что накопилось в телефоне!
+            Затмите их всех!&nbsp;<br> Выкладывайте все, что накопилось в телефоне!
           </p>
         </div>
         <div class="photo-post__form-wrapper">
@@ -235,7 +238,7 @@
                 </svg>
               </button>
               <button class="photo-post__button-select photo-post__button-select--fill" type="button" aria-label="Заливка">
-                <svg width="48" height="43" viewBox="0 0 48 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="photo-post__button-select-icon" width="48" height="43" viewBox="0 0 48 43" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g opacity="0.3">
                     <path class="photo-post__button-select-icon" d="M33.12 17.88L15.24 0L12.41 2.83L17.17 7.59L6.88 17.88C6.3182 18.4425 6.00264 19.205 6.00264 20C6.00264 20.795 6.3182 21.5575 6.88 22.12L17.88 33.12C18.4425 33.6818 19.205 33.9974 20 33.9974C20.795 33.9974 21.5575 33.6818 22.12 33.12L33.12 22.12C33.6818 21.5575 33.9974 20.795 33.9974 20C33.9974 19.205 33.6818 18.4425 33.12 17.88ZM10.41 20L20 10.42L29.59 20H10.41ZM38 23C38 23 34 27.33 34 30C34 31.0609 34.4214 32.0783 35.1716 32.8284C35.9217 33.5786 36.9391 34 38 34C39.0609 34 40.0783 33.5786 40.8284 32.8284C41.5786 32.0783 42 31.0609 42 30C42 27.33 38 23 38 23Z" fill="#283645"/>
                     <path class="photo-post__button-select-icon" d="M48 40H0V43H48V40Z" fill="#283645"/>

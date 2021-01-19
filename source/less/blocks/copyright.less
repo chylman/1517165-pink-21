@@ -1,5 +1,17 @@
 .copyright {
   margin: 0 auto;
+  align-self: baseline;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    margin-left: auto;
+    margin-bottom: 18px;
+    align-self: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: -18px;
+  }
 }
 
 .copyright__text {
@@ -14,6 +26,10 @@
     font-weight: normal;
     font-size: 14px;
     line-height: 18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
   }
 }
 
